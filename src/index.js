@@ -3,7 +3,6 @@ import "./styles.scss"
 document.addEventListener("DOMContentLoaded", function () {
     const track = document.querySelector(".carousel__track");
 
-    // Generowanie logotypów
     for (let i = 1; i <= 17; i++) {
         const logoItem = document.createElement("div");
         logoItem.classList.add("carousel__item");
@@ -24,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".nav__fixed");
-    if (window.scrollY > 44) {
-      navbar.style.top = "0"; // Przylega do góry po przewinięciu
+    if (window.scrollY > 34) {
+      navbar.style.top = "0"; 
     } else {
-      navbar.style.top = "44px"; // Wraca na miejsce pod paskiem
+      navbar.style.top = "34px"; 
     }
 });
