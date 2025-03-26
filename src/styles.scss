@@ -203,8 +203,11 @@ html {
 
 .header {
   margin-top: 100px;
-  height: 862px;
+  height: 1080px;
   background-image: url("assets/main-background.webp");
+  background-size: cover; /* Rozciąga obraz na cały element, zachowując proporcje */
+  background-position: center; /* Wyśrodkowanie obrazu */
+  background-repeat: no-repeat; /* Zapobiega powtarzaniu obrazu */
   position: relative;
   margin-bottom: $section-gap;
 
@@ -267,7 +270,11 @@ article h2::before {
 }
 
 .about-us {
-  margin-bottom: $section-gap;
+  // paddin-bottom: $section-gap;
+  height: 1080px;
+  display: flex;
+  // align-items: center;
+  
 
   &__header {
     font-size: 2.5rem;
@@ -311,6 +318,7 @@ article h2::before {
   background-color: $main;
   padding-top: 8rem;
   margin-bottom: $section-gap;
+  height: 1080px;
 
   &__main {
     display: flex;
@@ -432,9 +440,9 @@ article h2::before {
 
 .services {
   padding-top: $section-gap;
-  padding-bottom: 100px;
-  margin-bottom: 100px;
+height: 1080px;
   background-image: url("../src/assets/giraffe_color.webp");
+
 
   &__header {
     font-size: 3.5rem;
@@ -442,10 +450,10 @@ article h2::before {
   }
 
   &__content {
-  margin-top: 20px;
+  margin-top: 200px;
     display: flex;
     flex-wrap: wrap;
-    width: 900px;
+    width: 1140px;
   }
 
   &__rectangle {
@@ -502,8 +510,19 @@ article h2::before {
 }
 
 .realizations {
-
+margin-top: $section-gap;
   margin-bottom: $section-gap;
+  height: 1080px;
+position: relative;
+  &:after{
+content: '';    
+position: absolute;
+background-color: #2c2e35;
+left: 0;
+top: 200px;
+width: 100%;
+height: 880px;
+  }
 
   &__wrapper{
     display: flex;
@@ -559,12 +578,21 @@ article h2::before {
   &__title {
     font-size: 2rem;
     padding-left: 10px;
+    font-weight: 600;
+  }
+
+  &__subtitle{
+    font-size: 2rem;
+    padding-left: 10px;
+    font-weight: 600;
+
   }
 
   &__title-wrapper {
     display: flex;
     align-items: center;
     margin-bottom: $section-gap;
+  // z-index: 10;
   }
 
   &__square {
