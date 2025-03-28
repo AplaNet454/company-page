@@ -29,3 +29,23 @@ window.addEventListener("scroll", function () {
       navbar.style.top = "34px"; 
     }
 });
+
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  let formData = new FormData(this);
+
+  fetch("http://localhost/mail.php", {
+      method: "POST",
+      body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById("message").innerText = data; 
+  })
+  .catch(error => {
+      document.getElementById("message").innerText = "Wystąpił błąd!";
+      console.error("Błąd:", error);
+  });
+});

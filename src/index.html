@@ -87,11 +87,15 @@
           <li class="about-us__list-item">Profesjonalne narzędzia i sprzęt</li>
           <li class="about-us__list-item">Indywidualne podejście</li>
         </ul>
+
+        <div class="about-us__words">
+          <img src="assets/engraved.webp" src="grawerowane litery">
+        </div>
       </div>
       </article>
 
       <article class="services" id="uslugi">
-        <div class="content-wrapper services-wrapper">
+        <div class="content-wrapper services__wrapper">
           <h2 class="services__header">USŁUGI</h2>
           <div class="services__content">
             <div class="services__rectangle">
@@ -104,7 +108,7 @@
               </div>
               <div class="services__img-wrapper">
                 <img
-                  src="assets/ksiazka.png"
+                  src="assets/book-icon.webp"
                   alt="książka"
                   class="services__img"
                   loading="lazy"
@@ -227,7 +231,7 @@
               </div>
               <div class="services__img-wrapper">
                 <img
-                  src="assets/digital-folder-icon.webp"
+                  src="assets/folder-icon.webp"
                   alt="książka"
                   class="services__img"
                   loading="lazy"
@@ -266,7 +270,7 @@
 
               <img
                 class="realizations__img"
-                src="assets/etykiety.png"
+                src="assets/katalogi.webp"
                 alt="katalogi"
                 loading="lazy"
               />
@@ -278,7 +282,7 @@
 
               <img
                 class="realizations__img"
-                src="assets/etykiety.png"
+                src="assets/etykiety.webp"
                 alt="etykiety"
                 loading="lazy"
               />
@@ -290,7 +294,7 @@
 
               <img
                 class="realizations__img"
-                src="assets/etykiety.png"
+                src="assets/wydawnicze.webp"
                 alt="książka"
                 loading="lazy"
               />
@@ -302,7 +306,7 @@
 
               <img
                 class="realizations__img"
-                src="assets/etykiety.png"
+                src="assets/reklamowe.webp"
                 alt="torby"
                 loading="lazy"
               />
@@ -368,12 +372,12 @@
               </div>
             </div>
             <div class="contact__right">
-              <form>
-                <label for="imie" class="contact__label">Imię:</label>
+              <form id="contact-form">
+                <label for="name" class="contact__label">Imię:</label>
                 <input
                   type="text"
-                  id="imie"
-                  name="imie"
+                  id="name"
+                  name="name"
                   placeholder="Imię"
                   class="contact__input"
                   required
@@ -404,6 +408,8 @@
                   </div>
                 </button>
               </form>
+              <p id="message"></p>
+
             </div>
           </div>
         </div>
