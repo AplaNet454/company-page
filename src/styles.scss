@@ -175,8 +175,6 @@ html {
   }
 
   &__logo {
-    padding-right: 5px;
-    height: 40px;
     width: auto;
   }
 
@@ -203,7 +201,8 @@ html {
 
 .header {
   margin-top: 100px;
-  height: $section-height;
+  // height: $section-height;
+  height: 800px;
   background-image: url("assets/main-background.webp");
   position: relative;
   margin-bottom: $section-gap;
@@ -267,8 +266,10 @@ article h2::before {
 }
 
 .about-us {
-  height: $section-height;
+  // height: $section-height;
   display: flex;
+  line-height: 3rem;
+  margin-bottom: 100px;
 
   &__header {
     font-size: 2.5rem;
@@ -276,6 +277,7 @@ article h2::before {
 
   &__text {
     margin-top: 3rem;
+    text-align: justify;
     font-size: 2.3rem;
   }
 
@@ -289,6 +291,7 @@ article h2::before {
     font-weight: 600;
     font-size: 2.3rem;
     list-style: none;
+    position: relative;
   }
 
   &__list-item {
@@ -308,6 +311,9 @@ article h2::before {
   }
 
   &__words{
+    position: absolute;
+    right: 0;
+    top: 0px;
     display: flex;
     justify-content: end;
   }
@@ -459,8 +465,8 @@ article h2::before {
 
   &__rectangle {
     background-color: $white;
-    width: 253px;
-    height: 144px;
+    width: 273px;
+    height: 184px;
     margin-right: 24px;
     margin-bottom: 24px;
     padding: 10px;
@@ -494,7 +500,7 @@ article h2::before {
   }
 
   &__subtitle {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: $red;
   }
 
@@ -505,7 +511,7 @@ article h2::before {
   &__text {
     margin-top: 10px;
     color: $main;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
   }
 }
 
@@ -559,7 +565,8 @@ article h2::before {
     position: absolute;
     color: $white;
     right: 0;
-    top: -10px;
+    font-size: 1.5rem;
+    top: -16px;
     z-index: 4;
   }
 
@@ -602,12 +609,16 @@ article h2::before {
     font-weight: 600;
   }
 
+  &__movie{
+    width: 1140px;
+  }
   &__ta {
     padding-left: 20%;
   }
 
   &__movie-wrapper {
     position: relative;
+    text-align: center;
   }
 
   &__header-wrapper {
@@ -640,7 +651,7 @@ article h2::before {
     display: flex;
     gap: 20px;
     width: fit-content;
-    animation: carouselScroll 10s linear infinite;
+    animation: carouselScroll 20s linear infinite;
   }
 
   &__item {
