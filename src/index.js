@@ -34,6 +34,8 @@ document
     event.preventDefault();
 
     let formData = new FormData(this);
+    document.getElementById("contact-form").reset();
+
 
     fetch("http://localhost/mail.php", {
       method: "POST",
@@ -41,10 +43,11 @@ document
     })
       .then((response) => response.text())
       .then((data) => {
-        document.getElementById("message").innerText = data;
+
+        document.getElementById("message").innerText = "Dziękujemy za wysłanie wiadomości. Skonatkujemy się tak szybko jak to możliwe!";
       })
       .catch((error) => {
-        document.getElementById("message").innerText = "Wystąpił błąd!";
+        document.getElementById("message").innerText = "Ups! Coś poszło nie tak! Spróbuj pownownie lub skontaktuj sie z nami bezpośrdenio 693 418 350";
         console.error("Błąd:", error);
       });
   });
