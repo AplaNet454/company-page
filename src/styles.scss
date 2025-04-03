@@ -180,6 +180,9 @@ html {
 
   &__logo {
     width: auto;
+    position: absolute;
+    left: -182px;
+    top: 0;
 
     //TO DO
     @media (max-width: 1140px) {
@@ -263,8 +266,9 @@ html {
 .header {
   margin-top: 100px;
   // height: $section-height;
-  height: 800px;
+  height: 700px;
   background-image: url("assets/main-background.webp");
+  background-position: center;
   
   position: relative;
   margin-bottom: $section-gap;
@@ -278,8 +282,8 @@ html {
   &__text-content {
     display: flex;
     position: absolute;
-    top: 70%;
-    left: 30%;
+    top: 5%;
+    left: 20%;
     font-size: 20px;
     font-weight: 600;
   }
@@ -494,7 +498,7 @@ img{
   }
 
   &__button {
-    margin-top: 40%;
+    margin-top: 10%;
     margin-left: auto;
     margin-right: 0;
     all: unset;
@@ -504,6 +508,7 @@ img{
     display: flex;
     align-items: center;
     gap: 8px;
+    font-weight: 600;
 
     @media (max-width: 1200px) {
       margin-right: 1rem;
