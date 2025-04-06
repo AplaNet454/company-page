@@ -120,7 +120,7 @@ q:after {
   content: none;
 }
 
-$red: #c9271a;
+$red: #B70815;
 $main: #2c2e35;
 $white: #ffffff;
 $section-gap: 40px;
@@ -282,7 +282,7 @@ html {
   &__text-content {
     display: flex;
     position: absolute;
-    top: 5%;
+    top: 70%;
     left: 20%;
     font-size: 20px;
     font-weight: 600;
@@ -318,6 +318,16 @@ html {
     color: $white;
   }
 
+  &__info {
+    position: absolute;
+    right: 25%;
+    top: 10%;
+    color: $white;
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: 600;
+
+  }
   &__er {
     padding-left: 30%;
   }
@@ -414,13 +424,49 @@ article h2::before {
 }
 
 .contact {
-  background-color: $main;
-  padding-top: 8rem;
-  padding-bottom: 150px;
-  margin-bottom: $section-gap;
-
   @media (max-width: 1200px) {
     padding: 1rem;
+  }
+
+  &__header-title {
+    font-size: 2rem;
+    padding-left: 10px;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+    padding-left: 10px;
+    font-weight: 600;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: $section-gap;
+    @media (max-width: 1200px) {
+      padding: 1rem;
+    }
+  }
+
+  &__square {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90px;
+    height: 90px;
+    color: $red;
+    border: 2px $red solid;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  &__main-form {
+    background-color: $main;
+    padding-top: 8rem;
+    padding-bottom: 150px;
+    margin-bottom: $section-gap;
   }
 
   &__main {
@@ -563,8 +609,6 @@ article h2::before {
     &--third {
       opacity: 0.3;
     }
-
- 
   }
   @keyframes pulse {
     from {
@@ -576,8 +620,6 @@ article h2::before {
       opacity: 0.8;
     }
   }
-
- 
 }
 
 .services {
@@ -669,8 +711,6 @@ article h2::before {
 .realizations {
   margin-top: $section-gap;
   margin-bottom: $section-gap;
-  height: $section-height;
-
   position: relative;
 
   @media (max-width: 900px) {
@@ -683,7 +723,7 @@ article h2::before {
     left: 0;
     top: 200px;
     width: 100%;
-    height: 720px;
+    height: 320px;
 
     @media (max-width: 900px) {
       height: 100%;
@@ -762,40 +802,6 @@ article h2::before {
     width: 100%;
   }
 
-  &__title {
-    font-size: 2rem;
-    padding-left: 10px;
-    font-weight: 600;
-  }
-
-  &__subtitle {
-    font-size: 2rem;
-    padding-left: 10px;
-    font-weight: 600;
-  }
-
-  &__title-wrapper {
-    display: flex;
-    align-items: center;
-    margin-bottom: $section-gap;
-    @media (max-width: 1200px) {
-      padding: 1rem;
-    }
-  }
-
-  &__square {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 90px;
-    height: 90px;
-    color: $red;
-    border: 2px $red solid;
-    font-size: 2rem;
-    font-weight: 600;
-  }
-
   &__movie {
     width: 1140px;
     @media (max-width: 1140px) {
@@ -814,13 +820,13 @@ article h2::before {
   &__header-wrapper {
     position: absolute;
     right: 0;
-    top: 30%;
+    top: 60%;
     border: solid 3px $white;
   }
 
   &__header {
     color: $white;
-    font-size: 4rem;
+    font-size: 2.1rem;
     padding: 10px;
   }
 }

@@ -41,6 +41,7 @@
               <li><a href="#uslugi">Usługi</a></li>
               <li><a href="#realizacje">Realizacje</a></li>
               <li><a href="#klienci">Klienci</a></li>
+              <li><a href="#kontakt">Kontakt</a></li>
             </ul>
           </div>
         </div>
@@ -59,7 +60,11 @@
             NOWE MOŻLIWOŚCI DRUKU OFFSETOWEGO I CYFROWEGO
           </h2>
         </div>
+    
       </div>
+      <h2 class="header__info">
+        <p>PRECYZJA</p><p>W&nbsp;DRUKU</p><p>SIŁA</p>W&nbsp;TRADYCJI</p>
+      </h2>
     </header>
     <main>
       <article id="o-nas" class="content-wrapper about-us">
@@ -327,19 +332,6 @@
       </article>
 
       <article class="video">
-        <div class="content-wrapper">
-          <div class="video__title-wrapper">
-            <div class="video__square">
-              <p>KON</p>
-              <p class="video__ta">TA</p>
-              <p>KT</p>
-            </div>
-            <div class="video__title-content">
-              <p class="video__title">Chcesz otrzymać ofertę?</p>
-              <p class="video__subtitle">Skontaktuj się z nami</p>
-            </div>
-          </div>
-        </div>
         <div class="video__movie-wrapper content-wrapper">
           <div class="video__header-wrapper">
             <h3 class="video__header">DOŚWIADCZENI W DRUKOWANIU</h3>
@@ -349,8 +341,22 @@
           </video>
         </div>
       </article>
-      <article class="contact">
+      <article class="contact" id="kontakt">
         <div class="content-wrapper">
+          <div class="contact__title-wrapper">
+            <div class="contact__square">
+              <p>KON</p>
+              <p class="contact__ta">TA</p>
+              <p>KT</p>
+            </div>
+            <div class="contact__title-content">
+              <p class="contact__header-title">Chcesz otrzymać ofertę?</p>
+              <p class="contact__subtitle">Skontaktuj się z nami</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact__main-form">
+        <div class=" content-wrapper">
           <h2 class="contact__header">KONTAKT</h2>
           <div class="contact__main">
             <div class="contact__left">
@@ -404,6 +410,15 @@
                   required
                 />
                 <br /><br />
+                <label for="message" class="contact__label">Treść widamości</label>
+                <input
+                  type="text"
+                  id="message"
+                  name="message"
+                  placeholder="Treść widamości"
+                  class="contact__input"
+                />
+                <br /><br />
                 <button type="submit" class="contact__button">
                   WYŚLIJ
                   <div class="contact__triangles">
@@ -423,6 +438,7 @@
             </div>
           </div>
         </div>
+      </div>
       </article>
       <article class="trusted-us main-wrapper" id="klienci">
         <div class="content-wrapper">
