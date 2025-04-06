@@ -424,9 +424,8 @@ article h2::before {
 }
 
 .contact {
-  @media (max-width: 1200px) {
-    padding: 1rem;
-  }
+
+  
 
   &__header-title {
     font-size: 2rem;
@@ -444,9 +443,7 @@ article h2::before {
     display: flex;
     align-items: center;
     margin-bottom: $section-gap;
-    @media (max-width: 1200px) {
-      padding: 1rem;
-    }
+   
   }
 
   &__square {
@@ -467,6 +464,9 @@ article h2::before {
     padding-top: 8rem;
     padding-bottom: 150px;
     margin-bottom: $section-gap;
+    @media (max-width: 1200px) {
+      padding: 1rem;
+    }
   }
 
   &__main {
