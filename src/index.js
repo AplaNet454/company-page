@@ -3,7 +3,7 @@ import "./styles.scss";
 document.addEventListener("DOMContentLoaded", function () {
   const track = document.querySelector(".carousel__track");
 
-  for (let i = 1; i <= 17; i++) {
+  for (let i = 1; i <= 21; i++) {
     const logoItem = document.createElement("div");
     logoItem.classList.add("carousel__item");
 
@@ -37,20 +37,24 @@ document
     document.getElementById("contact-form").reset();
 
 
-    fetch("http://localhost/mail.php", {
+    fetch("/mail.php", {
       method: "POST",
       body: formData,
     })
-      .then((response) => response.text())
-      .then((data) => {
+      .then((response) => {
+        if (response.ok) {  // Sprawdzenie, czy odpowiedź ma status 200-299
+          document.getElementById("message-info").innerText = "Dziękujemy za wysłanie wiadomości. Skontaktujemy się tak szybko jak to możliwe!";
 
-        document.getElementById("message").innerText = "Dziękujemy za wysłanie wiadomości. Skonatkujemy się tak szybko jak to możliwe!";
+        } else {
+          throw new Error('Błąd odpowiedzi serwera');
+        }
       })
       .catch((error) => {
-        document.getElementById("message").innerText = "Ups! Coś poszło nie tak! Spróbuj pownownie lub skontaktuj sie z nami bezpośrdenio 693 418 350";
+        document.getElementById("message-info").innerText = "Upss! Coś poszło nie tak! Spróbuj pownownie lub skontaktuj sie z nami bezpośrdenio 693 418 350.";
         console.error("Błąd:", error);
       });
   });
+
 
 
   document.addEventListener("DOMContentLoaded", function () {

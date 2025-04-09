@@ -28,7 +28,19 @@ module.exports = {
   },
   optimization: {
     minimize: true,
-    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin({terserOptions: {
+      mangle: false, // Wyłącza "mangling", czyli zmianę nazw zmiennych
+      compress: {
+        drop_console: false, // Opcjonalnie: usuwa console.log itp.
+        passes: 1, // Używa jednego przebiegu kompresji
+      },
+      output: {
+        beautify: false, // Nie zachowuje formatowania w wynikowym pliku
+        comments: false, // Usuwa komentarze
+      }
+    }
+  }
+      ,)],
   },
   plugins: [
     new HtmlWebpackPlugin({
