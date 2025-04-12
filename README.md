@@ -40,6 +40,9 @@ npm start
 ### 4.Build for production
 npm run build
 
+############TO DO
+resize assets
+.htaccess
 
 
 
